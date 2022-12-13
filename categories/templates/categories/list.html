@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Reviewer - Home
+{% endblock title %}
+{% block content%}
+<main>
+    <div>
+        <h1>What Would You Like to Study?</h1>
+        <table>
+            <thead>
+                <th>Study Set</th>
+                <th>Subject</th>
+                <th>Cards</th>
+                <th>Studied?</th>
+            </thead>
+            <tbody>
+                {% for item in category_list.all %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.subject }}</td>
+                    <td>{{ item.cards.all|length }}</td>
+                    <td>{{ item.studied|yesno:"Done!,Not Yet!,N/A" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}
