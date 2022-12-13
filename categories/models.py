@@ -3,8 +3,8 @@ from django.conf import settings
 
 # Create your models here.
 class Categorie(models.Model):
-    name = models.CharField(max_length=200)
-    subject= models.CharField(max_length=300)
+    name = models.CharField(max_length=100)
+    subject= models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add=True)
     studied = models.BooleanField(default=False)
     owner = models.ForeignKey(
