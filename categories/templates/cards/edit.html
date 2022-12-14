@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Flash Cards
+{% endblock title %}
+{% block content%}
+<header>
+    <h1>Flashcards</h1>
+</header>
+<main>
+    <div>
+        <h1>Edit {{ card_object.term }}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ card_form.as_p }}
+            <button>Submit</button>
+        </form>
+        <a href="{% url 'show_set' card_object.id %}">
+            Cancel
+        </a>
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Reviewer - Home
+{% endblock title %}
+{% block content%}
+<header>
+    <h1>Flashcards</h1>
+</header>
+<main>
+    <h1>Flash Card Interface TBD!</h1>
+    {% for card in set %}
+    <div class="card">
+        {% include "cards/card.html" %}
+    </div>
+    {% endfor %}
+</main>
+{% endblock content %}

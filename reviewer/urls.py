@@ -25,5 +25,4 @@ urlpatterns = [
     path("", redirect_to_categories, name="home"),
     path("admin/", admin.site.urls),
     path("categories/", include("categories.urls")),
-    path("cards/", include('cards.urls')),
 ]

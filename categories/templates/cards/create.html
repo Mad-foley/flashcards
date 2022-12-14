@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Flash Cards
+{% endblock title %}
+{% block content%}
+<header>
+    <h1>Flashcards</h1>
+</header>
+<main>
+
+    <div>
+        <h1>Create a Flash Card</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+        <a href="{% url 'home' %}">
+            Cancel
+        </a>
+    </div>
+</main>
+{% endblock content %}

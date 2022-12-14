@@ -4,6 +4,10 @@
 Reviewer - Home
 {% endblock title %}
 {% block content%}
+<header>
+    <nav>
+    </nav>
+</header>
 <main>
     <div>
         <h1>What Would You Like to Study?</h1>
@@ -17,7 +21,7 @@ Reviewer - Home
             <tbody>
                 {% for item in category_list.all %}
                 <tr>
-                    <td>{{ item.name }}</td>
+                    <td><a href="{% url 'show_set' item.id %}">{{ item.name }}</a></td>
                     <td>{{ item.subject }}</td>
                     <td>{{ item.cards.all|length }}</td>
                     <td>{{ item.studied|yesno:"Done!,Not Yet!,N/A" }}</td>

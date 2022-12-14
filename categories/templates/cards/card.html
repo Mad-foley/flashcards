@@ -1,0 +1,7 @@
+
+<article>
+    <h4>{{ card.term }}</h4>
+    <p>{{ card.answer }} {{ card.img }}</p>
+    <hr>
+    <a href="{% url 'edit_card' card.id%}" role="button">Edit Card</a>
+</article>
