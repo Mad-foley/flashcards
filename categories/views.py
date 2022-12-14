@@ -13,8 +13,10 @@ def list_categories(request):
 
 def show_set(request, id):
     set = Card.objects.filter(category=id)
+    category = get_object_or_404(Categorie, id=id)
     context = {
         "set": set,
+        "category": category,
     }
     return render(request, "categories/set.html", context)
 

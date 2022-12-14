@@ -5,7 +5,13 @@ Reviewer - Home
 {% endblock title %}
 {% block content%}
 <header>
-    <h1>Flashcards</h1>
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.subject}}</p>
+    <p>Cards in set: {{ set.all|length }}</p>
+    <nav>
+        <a href="{% url 'home' %}"><button>Home</button></a>
+        <a href="{% url 'create_card' %}"><button>Create a Card!</button></a>
+    </nav>
 </header>
 <main>
     <h1>Flash Card Interface TBD!</h1>
