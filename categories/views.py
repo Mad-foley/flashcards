@@ -61,7 +61,7 @@ def create_set(request):
         if form.is_valid():
             set = form.save(False)
             set.owner = request.user
-            set.save
+            set.save()
             return redirect("home")
     else:
         form = CategorieForm()
