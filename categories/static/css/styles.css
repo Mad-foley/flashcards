@@ -1,44 +1,98 @@
-
-/* for flashcards */
-:root {
-    --accent: #6e48ad;
-    --accent-bg: white;
-    --bg: #fff;
-    --text: #212121;
-    --text-light: #585858;
-    --border: #d8dae1;
-    --code: #d81b60;
-    --preformatted: #444;
+/*All */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2dfe2;
+    margin: 0;
+    color: #310907;
+    display: flexbox;
+    text-align: center;
+}
+/* mostly cards */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+    gap: 10px;
+    background-color: rgb(253, 255, 240);
+    padding: 15px;
 }
 
+h1 {
+    color: #CB544B;
+}
 article {
-    background-color: var(--marked);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 1em;
-    margin: 1em 0;
+    padding: 20px 10px 20px 10px;
+    background-color: #F28585;
+    min-height: 200px;
+    border-radius: 10px;
 }
 
-h2 {
+img {
+    max-width: 200px;
+}
+/* Footer */
+
+footer {
+    bottom: 0;
+    padding: 40px 40px;
+    text-align: center;
+    color: #17515a;
+    font-size: 20px;
+    font-style: italic;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+a {
+    text-decoration: none;
+    color: #CB544B;
+    transition: .5s;
+    font-weight: bolder;
+}
+a:hover {
+    color: #4f211e;
+}
+
+button {
+    border-radius: 10px;
+    transition: .5s;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: F2E8DF;
+}
+
+details {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+nav {
+    display: flexbox;
+    text-align: right;
+    margin-right: 30px;
+    gap:30px;
+}
+
+/* Forms */
+input[type=text], input[type=url], textarea, select {
+    border: 2px solid #F28963;
+    border-radius: 10px;
+    transition: .5s;
+  }
+input[type=text]:focus, input[type=url]:focus, textarea:focus {
+    background-color: rgb(138, 214, 227);
+}
+
+/*Homepage*/
+table {
+    display:inline-block;
     text-align: center;
 }
 
-h2, h4 {
-    margin-top: 0;
+th {
+    font-size: 30px;
+    padding: 15px
 }
-
-hr {
-    background: var(--accent);
-    border-color: var(--accent);
-}
-
-button,
-a[role="button"] {
-    color: white;
-    text-decoration: none;
-}
-
-input, select, textarea {
-    width: 100%;
-}
-/* for flashcards */

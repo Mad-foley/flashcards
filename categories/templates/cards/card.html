@@ -4,8 +4,9 @@
     <details>
         <summary>Answer</summary>
         <p>{{ card.answer }}</p>
+        <img src="{{ card.img }}">
         <hr>
-    <a href="{% url 'edit_card' card.id%}" role="button">Edit Card</a>
+    <button><a href="{% url 'edit_card' card.id%}" role="button">Edit Card</a></button>
     </details>
 
 </article>

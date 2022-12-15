@@ -41,7 +41,7 @@ def edit_card(request, id):
         form = CardForm(request.POST, instance = card)
         if form.is_valid():
             form.save()
-            return redirect("show_recipe", id=id)
+            return redirect("show_set", id=card.category.id)
     else:
         form = CardForm(instance = card)
 

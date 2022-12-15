@@ -5,20 +5,21 @@ Reviewer - Home
 {% endblock title %}
 {% block content%}
 <header>
-    <h1>{{ category.name }}</h1>
-    <p>{{ category.subject}}</p>
-    <p>Cards in set: {{ set.all|length }}</p>
     <nav>
         <a href="{% url 'home' %}"><button>Home</button></a>
         <a href="{% url 'create_card' %}"><button>Create a Card!</button></a>
     </nav>
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.subject}}</p>
+    <p>Cards in set: {{ set.all|length }}</p>
+
 </header>
 <main>
     <h1>Flash Card Interface TBD!</h1>
-    {% for card in set %}
     <div class="card">
+    {% for card in set %}
         {% include "cards/card.html" %}
-    </div>
     {% endfor %}
+    </div>
 </main>
 {% endblock content %}
