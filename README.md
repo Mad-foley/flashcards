@@ -7,6 +7,7 @@ Features I would like to add:
 -Interactive UI
 -dictionary
 -ability to save your progress
+-edit redirects to appropriate category set
 
 Working on:
 -Adding Login/Signup
