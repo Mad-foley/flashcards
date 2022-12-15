@@ -6,9 +6,18 @@ Reviewer - Home
 {% block content%}
 <header>
     <nav>
+      {% if user.is_authenticated %}
+      <span>Hello, {{ user.username}}</span>
+      <a href="{% url 'create_set'%}">Create A Set</a>
+      <a href="{% url 'user_logout' %}">Logout</a>
+      {% else %}
+      <a href="{% url 'signup' %}">Sign up</a>
+      <a href="{% url 'user_login' %}">Login</a>
+      {% endif %}
     </nav>
 </header>
 <main>
+    {% if user.is_authenticated %}
     <div class="home">
         <h1>What Would You Like to Study?</h1>
         <table>
@@ -29,6 +38,9 @@ Reviewer - Home
                 {% endfor %}
             </tbody>
         </table>
+        {% else%}
+            <p>Create and Account or Login to view sets!</p>
+        {% endif %}
     </div>
 </main>
 {% endblock content %}

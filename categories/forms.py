@@ -11,7 +11,7 @@ class CardForm(ModelForm):
             "category",
         ]
 
-class CategorieForm:
+class CategorieForm(ModelForm):
     class Meta:
         model = Categorie
         fields = [
