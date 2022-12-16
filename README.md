@@ -1,4 +1,4 @@
-Practicing DJango making a flashcard app based off what I have leared and some new self-research.
+Practicing DJango making a flashcard app based off what I have leared and some new self-research. Will update but more frequent repos will be on https://gitlab.com/mad-foley
 
 Features I would like to add:
 -search bar
@@ -10,5 +10,4 @@ Features I would like to add:
 -edit redirects to appropriate category set
 
 Working on:
--Adding Login/Signup
 -CSS
