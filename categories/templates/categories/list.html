@@ -7,7 +7,7 @@ Reviewer - Home
 <header>
     <nav>
       {% if user.is_authenticated %}
-      <span>Hello, {{ user.username}}</span>
+      <span>Hello, {{ user.username}} </span>
       <a href="{% url 'create_set'%}">Create A Set</a>
       <a href="{% url 'user_logout' %}">Logout</a>
       {% else %}

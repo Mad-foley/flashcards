@@ -1,5 +1,5 @@
 from django.contrib import admin
-from categories.models import Categorie, Card
+from categories.models import Categorie
 
 # Register your models here.
 @admin.register(Categorie)
@@ -11,13 +11,3 @@ class CategoriesAdmin(admin.ModelAdmin):
         "owner",
         "studied",
     )
-
-@admin.register(Card)
-class Card(admin.ModelAdmin):
-    list_display = [
-        "term",
-        "answer",
-        "img",
-        "category",
-        "date_created",
-    ]

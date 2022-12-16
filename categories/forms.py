@@ -1,15 +1,6 @@
 from django.forms import ModelForm
-from categories.models import Card, Categorie
+from categories.models import Categorie
 
-class CardForm(ModelForm):
-    class Meta:
-        model = Card
-        fields = [
-            "term",
-            "answer",
-            "img",
-            "category",
-        ]
 
 class CategorieForm(ModelForm):
     class Meta:

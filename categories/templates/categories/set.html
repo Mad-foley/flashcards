@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Reviewer - Home
+Reviewer - {{ set.name }}
 {% endblock title %}
 {% block content%}
 <header>
@@ -9,15 +9,15 @@ Reviewer - Home
         <a href="{% url 'home' %}"><button>Home</button></a>
         <a href="{% url 'create_card' %}"><button>Create a Card!</button></a>
     </nav>
-    <h1>{{ category.name }}</h1>
-    <p>{{ category.subject}}</p>
-    <p>Cards in set: {{ set.all|length }}</p>
+    <h1>{{ set.name }}</h1>
+    <p>{{ set.subject }}</p>
+    <p>Cards in set: {{ set.cards.all|length }}</p>
 
 </header>
 <main>
     <h1>Flash Card Interface TBD!</h1>
     <div class="card">
-    {% for card in set %}
+    {% for card in set.cards.all %}
         {% include "cards/card.html" %}
     {% endfor %}
     </div>
