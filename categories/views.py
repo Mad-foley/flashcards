@@ -4,9 +4,9 @@ from cards.models import Card
 from categories.forms import CategorieForm
 from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def list_categories(request):
-    category = Categorie.objects.all()
+    category = Categorie.objects.filter(owner=request.user)
     context = {
         "category_list": category,
     }

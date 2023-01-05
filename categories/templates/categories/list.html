@@ -17,7 +17,7 @@ Reviewer - Home
     </nav>
 </header>
 <main>
-    {% if user.is_authenticated %}
+    {% if category_list.all|length > 0 %}
     <div class="home">
         <h1>What Would You Like to Study?</h1>
         <table>
@@ -39,7 +39,7 @@ Reviewer - Home
             </tbody>
         </table>
         {% else%}
-            <div>Create and Account or Login to view sets!</div>
+            <div>Create a deck to get started!</div>
         {% endif %}
     </div>
 </main>

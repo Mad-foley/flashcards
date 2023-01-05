@@ -8,6 +8,7 @@ Login! - Reviewer
 <header>
   <nav>
     <a href="{% url 'home' %}"> Main page</a>
+    <a href="{% url 'signup' %}">Sign up</a>
   </nav>
   <main>
     <h1>Login!</h1>
@@ -15,6 +16,7 @@ Login! - Reviewer
       {% csrf_token %}
       {{ form.as_p }}
       <button>Submit</button>
+
     </form>
   </main>
 </header>
