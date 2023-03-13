@@ -1,13 +1,3 @@
-Practicing DJango making a flashcard app based off what I have leared and some new self-research. Will update but more frequent repos will be on https://gitlab.com/mad-foley
+Practicing Django, HTML, SQLite and CSS by desiging a simple flashcard app that allows you to organize, create and delete study sets. Has basic user security authentication system.
 
-Features I would like to add:
--search bar
--more organization features
--real flashcard interface (one at a time random)
--Interactive UI
--dictionary
--ability to save your progress
--add study button
-
-Working on:
--CSS
+To run the program please create a virtual environment and running the command 'pip install -r requirements.txt'
